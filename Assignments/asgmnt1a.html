@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gross_salary</title>
+</head>
+<body>
+    <script>
+        var emp_name= prompt("Enter the employee name:"); //input details from employee
+        var emp_id=prompt("Enter the employee id:");
+        var salary=Number( prompt("Enter the salary:"));
+        var ta= (15*salary)/100; // calculating ta
+        var da= (35*salary)/100; // calculating da
+        var gross_salary=  salary + ta + da; // calculating gross salary
+        document.write("<br>Employee name : " + emp_name);
+        document.write("<br>Employee Id : " + emp_id);
+        document.write("<br>The Gross_salary is "  + gross_salary);
+    </script>
+</body>
+</html>

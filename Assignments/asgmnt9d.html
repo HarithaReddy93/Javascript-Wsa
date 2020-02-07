@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>num_days_month</title>
+</head>
+<body>
+    <script>
+        var month= prompt("enter the month:"); //input month from user
+        var days=0; //initialising days
+        switch(month){ // checking which month matches the given cases
+            case "jan" : days=30; 
+            break;
+            case "feb": days=28;
+            break;
+            case "march": days=31;
+            break;
+            case "april":days=30;
+            break;
+            case "may": days=31;
+            break;
+            case "june":days=30;
+            break;
+            case "july":days=31;
+            break;
+            case "aug": days=31;
+            break;
+            case "sep": days=30;
+            break;
+            case "oct": days=31;
+            break;
+            case "nov": days=30;
+            break;
+            case "dec": days=31;
+            break;
+            default: alert("enter month:"); // if entered other than the months
+        }
+        document.write("Days in "+ month + " is "+ days); //printing the result
+    </script>
+    
+</body>
+</html>

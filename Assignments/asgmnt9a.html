@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Decimal_to_binary</title>
+</head>
+<body>
+    <script>
+        var a = Number(prompt("enter a number"));
+        var num=a;
+         var c="";
+            document.write("<br>binary value");
+
+            //binary
+            while (a > 0) {
+                var b = a % 2//remainder will be either 0 or 1 when divided by 2
+                c=b+c; //concatenating
+                a = parseInt(a / 2);   
+            }
+            document.write( c); //result
+
+            //octal
+            c=""; 
+            document.write("<br>octal value");
+            a=num;
+             while(a>0){
+                var b= a%8; //divide by 8 to get octal number
+                a=parseInt(a/8);
+                c=b+c; //concatenating
+             }
+             document.write(c); //result
+           
+
+            //hexadecimal 
+            c="";
+            document.write("<br>hexadecimal value");
+            a=num;
+           
+            while(a>0){  
+                var b= a%16; //divide by 16 to get hexadecimal
+                //c=b+c //concatenating
+                a=parseInt(a/16); //dividing number by 16
+                //check if numbers fall between 10 to 15 to represent in alphabet
+                switch(b){ 
+                    case 10 : b="A";
+                    break;
+                    case 11 : b="B";
+                    break;
+                    case 12 : b="C";
+                    break;
+                    case 13 : b="D";
+                    break;
+                    case 14 : b="E";
+                    break;
+                    case 15 : b="F";
+                    break;
+                    default:b;
+                }
+                c=b+c
+               
+               
+            }
+            document.write(c);
+           
+
+    </script>
+</body>
+</html>

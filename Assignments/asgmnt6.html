@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nim_game</title>
+</head>
+
+<body>
+    <script>
+        var stone = Number(prompt("Enter the number of stones:"));
+        var player1 = prompt("Enter player1 name: ");
+        var player2 = prompt("Enter player2 name: ");
+
+        while (stone > 0) { //check if stones are greater than 0
+
+            //player1
+            if (stone < 3) { //check if stones remaining is less than 3
+                confirm(" Remaining stone(s) :" + stone + " Enter between the remaining stone(s) ");
+            }
+
+
+            var stone1 = Number(prompt(player1 + "  remove 1,2 or 3 stone(s) at once."));
+            while (stone1 > stone) { // check if player1 stones is greater than remaining stones
+                confirm("You have entered more than the remaining stones.please try again");
+                //if player 1 stones is greater than or equal to remaining stones then ask player to enter again
+                stone1 = Number(prompt(player1 +" remove 1,2 or 3 stone(s) at once."));
+            }
+            stone = stone - stone1;
+            if (stone == 0) {//check if stones are remaining or not
+                    document.write(" Winner is " + player1);
+                    break;
+                }
+
+            //player2    
+
+            if (stone < 3) {  //check if stones remaining is less than 3
+                confirm(" Remaining stone(s) :" + stone + " Enter between the remaining stone(s) ");
+            }
+            var stone2=Number(prompt(player2 + "  remove 1,2 or 3 stone(s) at once."));
+            while (stone2> stone) { // check if player1 stones is greater than remaining stones
+                confirm("You have entered more than the remaining stones.please try again");
+                 //if player 1 stones is greater than or equal to remaining stones then ask player to enter again
+                stone2 = Number(prompt(player2 + "  remove 1,2 or 3 stone(s) at once."));
+            }
+            stone = stone - stone2;
+            if (stone == 0) { //check if stones are remaining or not
+                    document.write(" Winner is " + player2);
+                    break;
+                }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

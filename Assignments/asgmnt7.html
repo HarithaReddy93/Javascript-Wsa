@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Robot_circle</title>
+</head>
+<body>
+    <script>
+        var move = prompt("Enter robot moves(L,R,U,D):");
+        var c=0;
+        var countl = 0, countr = 0, countu = 0, countd = 0;//initialise counters
+        var moveit = move.split("");//split the string
+        for (var i = 0; i <(move.length); i++) { 
+
+                switch (moveit[i]) { //checking which case will match
+
+                    case  "l":countl = countl+1; // increment if robot moved left
+                    break;
+
+                    case  "r":countr = countr+1;// increment if robot moved right
+                    break;
+
+                    case  "u":countu = countu+1;// increment if robot moved up
+                    break;
+
+                    case  "d": countd = countd+1;// increment if robot moved down
+                    break;
+
+                    default: {
+                        c=1;
+                        alert("You have not entered from the given moves");
+
+                    }
+                }
+            }
+        if (c==0){
+
+            if ((countl == countr) && (countu == countd)) {//check if left=right and up=down
+            document.write("True! ");
+            }
+        else {
+                document.write("False! ");
+            }
+        
+        }
+        else {
+            document.write("you hav not entered from given moves")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swap_without_3rd_var</title>
+</head>
+<body>
+    <script>
+        var a=Number(prompt("Enter 1st number:")); //input the numbers from the user
+        var b=Number(prompt("Enter 2nd number"));
+        document.write("Numbers before swapping")
+        document.write("<br>A = "+a);
+        document.write("<br>B = "+ b);
+
+        a=a+b; //add both the numbers
+        b=a-b; //substract total with 2nd number 
+        a=a-b; //substract total with previous result
+
+        document.write("<br> Numbers after swapping") //displaying result
+        document.write("<br>A = "+ a); 
+        document.write("<br>B = "+ b);
+        
+    </script>
+    
+</body>
+</html>

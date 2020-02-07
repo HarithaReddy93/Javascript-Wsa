@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>time</title>
+</head>
+<body>
+    <script>
+        var time= Number(prompt("Enter the time(in 24 hours format) :"));
+        //var M=prompt("enter am or pm");
+        if(time>=1 && time<=12){ //checking if time is before 12
+            document.write("Good Morning!");
+        }
+        else if(time>12 && time<=16){ //checking if time is afternoon
+            document.write("Good Noon!");
+        }
+        else if(time>16 && time<=19){//checking if its evening
+            document.write("Good Evening!");
+        }
+        else document.write("Good Night!"); // if all the condition fails its night
+
+    </script>
+</body>
+</html>

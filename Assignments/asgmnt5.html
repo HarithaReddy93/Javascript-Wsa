@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>div3 div5</title>
+</head>
+<body>
+    <script>
+        var N = Number(prompt("Enter a positive integer:"));
+        for(i=1;i<=N;i++){
+
+            if((i%3)==0 && ((i%5)==0)){ //To check if number is divisible by 3 and 5
+                document.write("<br>FizzBuzz");
+            }
+            else if((i%3)==0){ //to check if number is divisible by 3
+                document.write("<br>Fizz");
+            }
+            else if((i%5)==0){ //to check if number is divisible by 5
+                document.write("<br>Buzz");
+            }
+            else {
+                document.write("<br>"+i);
+            }
+        }
+    </script>
+</body>
+</html>

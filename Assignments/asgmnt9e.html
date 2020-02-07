@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>num_days_year</title>
+</head>
+<body>
+    <script>
+        //its leap year, if its divisible by 4,100,400 
+        var year=Number(prompt("enter the year:"));//input the year from the user
+        var days=0;
+        if((year%4==0 && year%100==0) || year%400==0){//check if year is divisible by 4,100 or 400
+            days=366;
+        }
+        else{
+            days=365;
+        }
+        
+       
+        if(days==366){                  //check if its leap year
+            document.write("it's a leap year<br>")
+        }
+        document.write("Days in " + year + " is " + days + " days"); //displaying result
+    </script>
+    
+</body>
+</html>
