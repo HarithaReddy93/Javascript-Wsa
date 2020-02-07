@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>try-throw-catch-Eligibility to vote</title>
+</head>
+<body>
+    <script>
+        function agelimit(){
+            var age=eval(prompt("enter your age:"));
+            try{
+                if(age<18){
+                    throw('not eligible for voting');
+                }
+                else{
+                    document.write("eligible for voting");
+                }
+
+            }
+            catch(e){
+                alert('error: ' +e);
+            }
+        }
+        function range(){
+            var ran=eval(prompt("enter number :"));
+            try{
+                if(ran<5 || ran>20){
+                    throw('not in the range');
+                }
+                else{
+                    document.write("in the range");
+                }
+
+            }
+            catch(e){
+                alert('error: ' +e);
+            }
+        }       
+    </script>
+    <button onclick="agelimit()">age limit</button>
+    <button onclick="range()">range</button>
+</body>
+</html>
