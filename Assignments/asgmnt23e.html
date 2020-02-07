@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>insert_string within_other</title>
+</head>
+<body>
+    <script>
+        var str1=prompt("Enter string1: "); //input string 1 from user
+        document.write("String!: "+ str1);
+        var str2=prompt("Enter string 2:"); //input string2 from user
+        document.write("<br>String2: "+str2);
+        var pos=Number(prompt("Enter the position in string1: "));//input position from user
+        document.write("<br>Result: ") 
+
+        var split=str1.split(" "); //split string1 to array to get positions
+        for(var i=0;i<str1.length;i++){ //loop till string1 length
+            if(i==pos)                  //check if position given has matched or not
+            document.write(" "+str2+" ");//if matched, print string2
+        document.write(str1[i]);        //if not matched ,print string1
+        }
+        
+    </script>
+    
+</body>
+</html>

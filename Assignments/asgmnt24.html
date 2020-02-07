@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Longest_word_in_string</title>
+</head>
+<body>
+    <script>
+        var max=0;
+        var str=prompt("Enter a sentence:");//input from user
+        var split=str.split(" ");       //string to array convertion
+        document.write("Input string: "+str); //display input from user
+        
+        for(var i=0;i<split.length;i++){ //loop used for checking longest word value
+            if((split[i].length)>max){
+                max=(split[i].length);
+            }
+        }
+        document.write("<br> longest string: ")
+        for(var i=0;i<split.length;i++){//loop used to display longest word when max value meets array length
+            if(max==(split[i].length)){
+                document.write(" "+split[i]); //display longest word from string
+            }
+        }
+    </script>
+    
+</body>
+</html>

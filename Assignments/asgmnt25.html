@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindrome</title>
+</head>
+<body>
+    <script>
+        var p=0; //initialisation
+        var str=prompt("Enter string:"); //input from user
+        var n=str.length;       
+        var split=str.split("");    //split the string into array
+        for(var i=0;i<n/2;i++){     //loop to check for common
+            if(split[i]!=split[(n-1)-i]){ //check if first index is equal to last
+                p=1;  
+            }
+        }
+        if(p==0)
+            document.write("palindrome") //display result
+        else
+            document.write("Not a palindrome");
+        
+    </script>
+    
+</body>
+</html>

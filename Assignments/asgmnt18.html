@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum_product_array</title>
+</head>
+<body>
+    <script>
+        var arr=[];                               //empty array
+        var n=Number(prompt("Enter array size"));
+        for(var i=0; i<n;i++){
+            arr.push(Number(prompt("Enter array elements"))); //saving array elements
+        }
+        document.write("Array : "+ arr);
+        var sum=0,product=1;
+        for(var j=0;j<n;j++){
+            sum+=Number(arr[j]); //sum calculation
+            product=product*arr[j]; //product calculation
+        }
+        document.write("<br>Sum : " + sum); //display sum
+        document.write("<br>Product : "+ product); //display product
+
+    </script>
+    
+</body>
+</html>

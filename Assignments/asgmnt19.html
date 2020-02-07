@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ascending_descending</title>
+</head>
+<body>
+    <script>
+        //2 digits problem
+        var arr = []; //initialise array
+        var n = Number(prompt("Enter the array size:")); //input array size
+        for (var i = 0; i < n; i++) {
+            arr.push(Number(prompt("Enter array elements:")));//saving array elements
+        }
+        document.write("Array: " + arr);//display array elements
+        for (var i = 0; i < n-1; i++) {  //to compare each element with all other 
+            for (var j = 0; j<(n-1); j++) {
+                if (arr[j] >= arr[j + 1]) {//compare adjacent elements
+                    var a = arr[j];         //if true, swap positions
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = a;
+                }
+
+            }
+        }
+        document.write("<br>Ascending order: " + arr);
+        for (var i = 0; i < n-1; i++) { //to compare each element with all other
+            for (var j = 0; j <(n-1); j++) {
+                if (arr[j] <= arr[j + 1]) { //compare adjacent elements
+                    var a = arr[j]; //if true swap positions
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = a;
+                }
+
+            }
+        }
+        document.write("<br>Descending order: " + arr);
+    </script>
+</body>
+</html>

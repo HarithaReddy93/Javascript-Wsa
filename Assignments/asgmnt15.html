@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unique_pin</title>
+</head>
+<body>
+    <script>
+        var n=Number(prompt("enter the pin size"))// input from user pin length
+        var arr = []; //initialising array
+        //function definition
+        var random = function (arr) {
+            if (arr.length >= n) return; //to check till pin length
+            var newNum = Math.floor(Math.random() * n + 1); //random pin generation
+            if (arr.indexOf(newNum) < 0) {  //check if number is not repeating.
+                arr.push(newNum);           //indexof() returns -1 if not repeating
+            }
+            random(arr);
+        };
+        //function call
+        random(arr);
+        var res=arr.join("");
+        document.write("Unique Pin: " + res );
+
+    </script>
+</body>
+</html>

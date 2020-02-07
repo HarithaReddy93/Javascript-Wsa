@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reverse_given_string</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter string:");    //input string from user
+        document.write("Input string: " + str+"<br>");//display user input
+
+        document.write("<br>Output String: ");
+        for(var i=0;i<=str.length;i++){  //loop till string length
+            var p=str.length-i;         //used to get position from last
+            if(p!=str.length)           //if position is not equal to string length
+            document.write(str[p]);     //display corresponding position element
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>swap_lowercase_uppercase</title>
+</head>
+<body>
+    <script>
+        var arr="";     //initialising string
+        arr=prompt("Enter the string:"); //accepting string from user
+        var arrsplit=arr.split("");  //splitting string to array
+        document.write(arr+"<br>");  
+        for(var i=0;i<arr.length;i++){ //looping till string length
+            var reg=/[a-z]/             //using regex condition 
+            if(reg.test(arrsplit[i])){ //check if array element is lower
+               arrsplit[i]= upper(arrsplit[i]); //if true, swap tp uppercase
+            }
+            else{
+                arrsplit[i]=lower(arrsplit[i]); //if false,swap to lowercase
+            }
+        }
+        //function definition
+        function upper(array1){
+            array1=array1.toUpperCase();
+            return array1;
+        }
+        function lower(array2){
+            array2=array2.toLowerCase();
+            return array2;
+        }
+        var a=arrsplit.join(""); //joining array to string
+        document.write("<br>"+a) //display string
+    </script>
+    
+</body>
+</html>

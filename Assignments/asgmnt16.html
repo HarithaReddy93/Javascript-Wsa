@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pos_Neg</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        var n=Number(prompt("Enter array size:"));//input array size from user
+        for(var i=0;i<n;i++){
+            arr.push(prompt("enter the array elements")); // saving array elemets
+        }
+        document.write("The array elements are <br>")
+        document.write(arr); //displaying array elements
+        pos=0,neg=0;        //initialising positive ,negative variables
+        for(var j=0;j<n;j++){
+            if(arr[j]>0){ //if number is greater than or equal to 0 then its a positive number
+                pos=pos+1; //if true, increment positve variable
+            }
+            else if(arr[j]!=0){
+                neg=neg+1;//if false, increment negative variable
+            }
+        }
+        document.write("<br>Positive Numbers: " + pos); //displaying positve and negative numbers count
+        document.write("<br>Negative Numbers: " + neg);
+    </script>
+</body>
+</html>

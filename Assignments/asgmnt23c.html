@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capitalise_word_in_string</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter a sentence:");    //input string from user
+        document.write("Input String :" + str+"<br>"); //display user input
+        var arr=[],join="";  
+        arr=str.split(" ");             //splitting string to array
+
+        document.write("<br> Output String:  ")
+        for(var i=0;i<arr.length;i++){     //using for loop to iterate for array length
+            var split=arr[i].split("");     //split each array element
+            split[0]=split[0].toUpperCase();//change first alphabet of each word to uppercase
+            join=split.join("");            //join back array to get word
+            document.write(" " + join);     //display string
+        }
+
+    </script>
+</body>
+</html>

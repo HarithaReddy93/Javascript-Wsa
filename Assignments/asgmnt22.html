@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scramble_to_given_position</title>
+</head>
+<body>
+    <script>
+        var str = prompt("Enter the string:");  //accepting from user
+        document.write("String before scramble: " + str);
+
+        var pos = [];                       //initialising to array
+        for (var i = 0; i < str.length; i++) {
+            pos.push(Number(prompt("Enter positions:"))); //saving positions in a array
+        }
+
+        document.write("<br>Position: " + pos);         //displaying position values
+        document.write("<br>After scrambling: ");
+        for (var i = 0; i < str.length; i++) {      //iterate till string length
+            result = scramble(pos[i]);              //function call
+            document.write(result);                 //display result
+        }
+        //function definition
+        function scramble(num) { 
+            return str[num];            //returning string character based on position value
+        }
+    </script>
+    
+</body>
+</html>

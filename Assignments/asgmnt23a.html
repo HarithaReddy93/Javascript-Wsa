@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>remove_characters_from_string</title>
+</head>
+<body>
+    <script>
+        
+        var str=prompt("Enter the string: "); //input from user
+        document.write("String:" + str); //displaying user input
+        var pos=Number(prompt("Enter the position: ")); //from which position should be removed
+        var Nchar=Number(prompt("Enter the number of characters to remove:")); //till how amny characters
+        var slice1=str.substr(pos,Nchar); //seperating the characters to be removed
+       document.write("<br> slice:" + slice1);
+        var split1=str.split(" "); //converting user input string to array
+       document.write("<br> split: " + split1);
+        document.write("<br> Output: ") ;
+        for(var i=0;i<split1.length;i++){ 
+            if(split1[i]!=slice1){            //to check  user input with removed 
+                document.write(" "+split1[i]); //display output after removing
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

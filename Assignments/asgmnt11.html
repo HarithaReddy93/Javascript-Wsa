@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amstrong_number</title>
+</head>
+<body>
+    <script>
+        var a=0,b=0,c=0,m=0,n=0; //initialise the values
+        document.write("Amstrong numbers")
+        for(var i=100;i<=999;i++){ //checking within range using for loop
+            m=i;
+            a=m%10;             //obtaining each digit seperately using modulo operation
+            m=parseInt(m/10);
+            b=m%10;            
+            m=parseInt(m/10);
+            c=m%10;             
+            n=(a*a*a) + (b*b*b) + (c*c*c); //adding each digit cube with other
+            if(n==i){                    //checking if number is equal to the result   
+                document.write("  "+ n); //displaying result
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

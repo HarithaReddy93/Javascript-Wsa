@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array_to_string</title>
+</head>
+<body>
+    <script>
+        var arr=[];                               //empty array
+        var n=Number(prompt("Enter array size"));
+        for(var i=0; i<n;i++){
+            arr.push(prompt("Enter array elements")); //saving array elements
+        }
+        document.write("Array :"+ arr + "<br>"); //displaying array
+        var arr1=arr.join("/");                    //usimg join method to convert array to string
+        document.write("<br>String :" + arr1)   //diaplaying string
+    </script>
+    
+</body>
+</html>

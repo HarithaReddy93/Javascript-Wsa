@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Island_program</title>
+</head>
+<body>
+    <script>
+        var arr = [],sum=0; //initialisation
+        //debugger;
+        //user input for rows and columns
+        var totalRow = +prompt("enter number of rows");
+        var totalCol = +prompt("enter number of columns");
+        //loop to get array elements
+        for(let row=0;row<totalRow;row++) {
+            arr[row] = [];              //two dimension
+            for(let col=0;col<totalCol;col++) {
+                arr[row][col]=+prompt("enter the elements");
+            }
+        }
+        //displaying array elements
+        for(let row=0;row<arr.length;row++) {
+            for(let col=0;col<arr[row].length;col++) {
+                document.write(arr[row][col]+" ");
+            }
+            document.write("<br>");
+        }
+        //loop to check total number of 1's and get total area
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<arr.length;j++){
+                if(arr[i][j]==1){
+                    sum=sum+4;
+                }
+            }
+        }
+        document.write("area: " + sum); //diaplay total area
+
+        //loop to check if adjacent elements have 1's
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<arr.length-1;j++){
+                if(arr[i][j]==1 && arr[i][j+1]==1) //if true, total area-2
+                    sum=sum-2;
+                
+                if(arr[j][i]==1 && arr[j+1][i]==1)
+                    sum=sum-2;
+                
+            }
+        }
+        //display perimeter
+        document.write("<br> perimeter of island: " + sum);
+    </script>
+</body>
+</html>
