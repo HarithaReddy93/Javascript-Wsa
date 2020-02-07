@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop_down_list</title>
+</head>
+<body>
+    <!-- form to have a dropdown list-->
+    <form>
+        <select id="state">
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Tamilnadu</option>
+            <option>Telangana</option>
+            <option>UP</option>
+        </select>
+        <input type="button" onclick="removeState()" value="Remove">
+    </form>
+    <script>
+        //to get length list 
+        var x=document.getElementById("state");
+        document.write("Number of items in list :" + x.length );
+        //function definition
+        function removeState(){
+            var  x=document.getElementById("state");        //get element by id 
+            x.remove(x.selectedIndex );                     //delete that selected
+        }        
+    </script>
+</body>
+</html>

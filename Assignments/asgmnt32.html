@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var employee= new Object(); //constructor for object creating
+            employee.name=prompt("Enter your name:"); //object properties
+            employee.empId=prompt("Enter empId:");
+            employee.empSalary=prompt("Enter emp salary:");
+            employee.deptName=prompt("Enter your department:");
+        var len=Object.keys(employee) //checking length of keys in object employee
+        
+        //displaying object properties
+        document.write("Name:  "+employee.name);
+        document.write("<br> empId: "+employee.empId);
+        document.write("<br> empsalary:  "+employee.empSalary);
+        document.write("<br> department:  "+employee.deptName);
+        document.write("<br>length of employee object: " +len.length);
+        //deleting one of object property
+        delete employee.deptName;
+        document.write("<br> department after delete:  "+employee.deptName);
+
+    </script>
+</body>
+</html>

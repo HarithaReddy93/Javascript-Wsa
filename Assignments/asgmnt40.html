@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>attributes_of_link</title>
+</head>
+<body>
+  <!-- paragraph tag-->
+  <p><a id="Dom" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://www.google.com/"></a></p>
+  <button onclick="getAttributes()">Click here </button>
+
+  <script>
+    //In <p> tag, use <a> tag get  attribute values 
+    //function call
+    function getAttributes() {
+      //getting attribute values by using getElementById
+      var h = document.getElementById("Dom").href; //website
+      var hl = document.getElementById("Dom").hreflang; //language
+      var r = document.getElementById("Dom").rel;
+      var tg = document.getElementById("Dom").target;
+      var tp = document.getElementById("Dom").type;
+      
+      //displaying attribute values
+      document.write('<br>The value of the href attribute of the link is : ' + h);
+      document.write('<br>The value of the hreflang attribute of the link is : ' + hl);
+      document.write('<br>The value of the rel attribute of the link is : ' + r);
+      document.write('<br>The value of the taget attribute of the link is : ' + tg);
+      document.write('<br>The value of the type attribute of the link is : ' + tp);
+    }
+
+  </script>
+</body>
+</html>

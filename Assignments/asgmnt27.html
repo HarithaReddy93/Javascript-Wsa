@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>capatalise_1st_letter_word</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter a sentence: "); //input from user
+        var split1=str.split(" ");  //convert string to array
+        document.write("Input: "+str); //display input
+        document.write("<br> Output: ")
+
+
+        for(var i=0;i<str.length;i++){ //loop to capatalise first character of each word
+            var split2=split1[i].split(""); //split each word again 
+            split2[0]=split2[0].toUpperCase(); //uppercase
+            var join1=split2.join(""); //join to make it a array
+            document.write(" "+ join1); //displat output
+
+        }
+         
+    </script>
+</body>
+</html>

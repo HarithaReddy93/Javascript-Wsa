@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>two_button</title>    
+</head>
+<body>
+    <p id="para"  >  
+        Infuse your life with action. Don't wait for it to happen.
+        Make your own future. Make your own hope. 
+        And what ever your own beliefs,honor your creator
+    </p>
+    <button onclick=" changeParaText()"> ChangeFont </button>
+    <button onclick="  addBorder()"> BorderImage </button>
+     
+    <script>
+        //function definition
+        //function to chanage font style
+            function changeParaText(){
+               document.getElementById("para").style="font-size: medium;color:blue ; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"
+                
+            }
+        //function to add border
+            function addBorder(){
+                document.getElementById("para").style.border= "4px dotted green"
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCRIPT LANGUAGE="JavaScript">
+
+        debugger;
+        //function definition to reset
+        function ResetCounts() {
+            visit = 0;
+            SetCookie("visit", visit);
+            history.go(0);
+        }
+        window.onload = DisplayInfo
+
+        //function definition to display  
+        function DisplayInfo() {
+            var visit;
+            if (!(visit = GetCookie("visit")))
+                visit = 0;
+            if (visit == 0) {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null)
+                    setCookie1("username", user);               //function call to setcookie      
+                }
+            visit++;
+            SetCookie("visit", visit);
+            if (visit == 1)
+                alert("welcome " + user);
+            else
+                alert(" You have visited this page " + visit + " time(s), ");
+
+        }
+        //function definition to set cookie
+        function SetCookie(name, value) {
+            document.cookie = name + "=" + escape(value);
+        }
+        function setCookie1(cname, cvalue) {
+            document.cookie = cname + "=" + cvalue + ";" + ";path=/"; //set cookie
+        }
+        //function definition to get cookie
+        function GetCookie(name) {
+            var arg = name + "=";
+            var alen = arg.length;
+            var clen = document.cookie.length;
+            var i = 0;
+            while (i < clen) {
+                var j = i + alen;
+                if (document.cookie.substring(i, j) == arg)
+                    return getCookieVal(j);
+                i = document.cookie.indexOf(" ", i) + 1;
+                if (i == 0)
+                    break;
+            }
+            return null;
+        }
+        //function definition to get cookie value
+        function getCookieVal(offset) {
+            var endstr = document.cookie.indexOf(";", offset);
+            if (endstr == -1)
+                endstr = document.cookie.length;
+            return unescape(document.cookie.substring(offset, endstr));
+        }    
+    </Script>
+
+    <!-- image with a paragraph-->
+    <img id="myImage" title="sampleImage" src="download2.jfif"><br>
+    <p> This is a sample html page which will contain text and an image,
+        where we need to display how many times the user visited the page </p>
+
+    <FORM>
+        <INPUT NAME="update" TYPE="BUTTON" VALUE="Revisit  Page" OnClick="history.go(0)">
+        <INPUT NAME="reset" TYPE="BUTTON" VALUE="Reset Counter" OnClick="ResetCounts()">
+    </FORM>
+</body>
+
+</html>

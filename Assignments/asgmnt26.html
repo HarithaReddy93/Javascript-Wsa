@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vowels</title>
+</head>
+<body>
+    <script>
+        var count=0; 
+        var str=prompt("Enter a sentence:"); //input from user
+        var split=str.split(""); //convert array to string
+        
+        document.write("Input: "+str + "<br>"); //display input
+        for(var i=0;i<(str.length);i++){ //loop to check each alphabet
+            switch(split[i]){               //check for a e i o u
+                case 'a': count=count+1;
+                break;
+                case 'e': count=count+1;
+                break;
+                case 'i': count=count+1;
+                break;
+                case 'o': count=count+1;
+                break;
+                case 'u': count=count+1;
+                break;
+                default: document.write(" ");
+            }
+        }
+        document.write("<br> number of vowels: " + count); //display number of vowels
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>recursive_func</title>
+</head>
+<body>
+    <script>
+        //function definition
+        function reverse(str){
+           if(str.length==1) //if length ==1,return that character
+           return str;
+           else
+            return reverse(str.slice(1))+str[0]; //recursive function
+        }
+        
+        var str=prompt("Enter a string");   //input from user
+        var output= reverse(str);           //function call
+        document.write("Output: " +output); //display output
+    
+    </script>
+    
+</body>
+</html>

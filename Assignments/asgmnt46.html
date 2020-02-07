@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bom_timer_30sec</title>
+</head>
+<body>
+    <script>
+        debugger;
+        x= prompt("Enter your name:"); //input from user
+        setInterval(timer,2000);    //BOM timing event, calls every 30sec
+        function timer(){          //function definition
+            setTimeout(display,1000)
+            document.body.innerHTML = ""; //clear screen
+        }
+        function display(){
+            document.write("User name: "+x);      //display username
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Area_triangle</title>
+</head>
+<body>
+        <h1> Area of triangle: </h1> 
+        <p id="area" > Area of triangle</p>
+    <script>
+        var a=+prompt("enter side a: "); //input from user
+        var b=+prompt("enter side b: ");
+        var c=+prompt("enter side c: ");
+        var s=(a+b+c)/2;                  //calculating s
+        var area=Math.sqrt(s*(s-a)*(s-b)*(s-c)); //calculating area
+        document.getElementById("area").innerHTML=area; //displaying result  using inner HTML
+    </script>
+    
+    
+    
+</body>
+</html>

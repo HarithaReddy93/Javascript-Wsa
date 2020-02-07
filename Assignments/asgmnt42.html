@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>paragraph_Alignment</title>
+</head>
+<body>
+    <!-- paragraph tag for alignment -->
+    <p> 
+         The truth is, you have about three paragraphs in a short story,
+          three pages in a novel, to capture that editor's attention enough for her to finish your story.
+    </p>
+    <p>
+            I'm pretty disciplined to keep the momentum of a story going by writing everyday, 
+            even if it's only a couple paragraphs or a page or two.
+    </p>
+    <p>
+            I even dream about writing. I'm talking seeing words across the page, whole paragraphs
+    </p>
+    <!-- buttons tag -->
+    <button onclick="left()">Left</button>
+    <button onclick="center()">Center</button>
+    <button onclick="right()">Right</button>
+    <script>
+        //debugger;
+        //function definition
+        function left(){
+           var x=document.getElementsByTagName("p"); //getting paragraph by tag name
+           var i;
+           for(i=0;i<x.length;i++)                  //loop to get paragraph index
+               x[i].style.textAlign ="left";        //alignment to left
+           
+        }
+        function center(){
+           var x=document.getElementsByTagName("p"); //getting paragraph by tag name
+           var i;
+           for(i=0;i<x.length;i++)                   //loop to get paragraph index
+               x[i].style.textAlign ="center";       //alignment to center
+        }
+        function right(){         
+           var x=document.getElementsByTagName("p"); //getting paragraph by tag name
+           var i;
+           for(i=0;i<x.length;i++)                   //loop to get paragraph index
+               x[i].style.textAlign ="right";        //alignment to right
+        }
+    </script>
+</body>
+</html>

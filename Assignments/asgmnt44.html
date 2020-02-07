@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom</title>
+</head>
+<p id="p">  </p>
+<!--Button creation-->
+<button onclick="para()">create para</button>
+<button onclick="strongele()">strong element</button>
+<button onclick="nav()">create nav</button>
+<body>
+    <script>
+        //function definition
+        function para() {
+            var para = document.createElement("p");
+            var textnode = document.createTextNode("This is a new paragraph.");
+            para.appendChild(textnode);
+            document.body.appendChild(para);
+        }
+        //function to make element <strong>
+        function strongele(){
+            var para = document.getElementById("p");
+            var bold = document.createElement('STRONG');
+            textnode = document.createTextNode("This is a paragraph"); 
+            bold.appendChild(textnode); 
+            para.appendChild(bold);
+        }
+        //function to create navigation element
+        function nav() {
+            var p = document.createElement("nav");
+            document.body.appendChild(p);
+            var para = document.createElement("a");
+            para.setAttribute("href", "https://www.google.com");
+            textnode = document.createTextNode("Google");
+            para.appendChild(textnode);
+            document.body.appendChild(para);
+        }    
+              
+    </script>
+</body>
+</html>

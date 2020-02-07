@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>get_Elements_By_ClassName</title>
+</head>
+<body>
+    <!-- paragraph tag with different class names -->
+    <p class="first">
+        The truth is, you have about three paragraphs in a short story,
+        three pages in a novel, to capture that editor's attention enough for her to finish your story.
+    </p>
+    <p class="second">
+        I'm pretty disciplined to keep the momentum of a story going by writing everyday,
+        even if it's only a couple paragraphs or a page or two.
+    </p>
+    <p class="third">
+        I even dream about writing. I'm talking seeing words across the page, whole paragraphs
+    </p>
+    <!-- button tag -->
+    <button onclick="byClassName()"> click me</button>
+    <script>
+        //function definition
+        //getElementsByClassName method
+        function byClassName(){
+            var x=document.getElementsByClassName("first");
+                x[0].style.backgroundColor="green";
+            var y=document.getElementsByClassName("second");
+                y[0].style.backgroundColor="pink";
+            var z=document.getElementsByClassName("third");
+                z[0].style.backgroundColor="yellow";        }
+    </script>
+</body>
+</html>

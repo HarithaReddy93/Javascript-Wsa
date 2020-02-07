@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular_exp_date</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter a string"); //input from user
+        //debugger;
+        var split=str.split(" ");         //string to array
+        document.write("Input : "+ str);  //display input
+        document.write("<br>Output: ");
+
+        for(var i=0;i<split.length;i++){ //loop to check for dates
+        var reg=/^(0[1-9]|[12][0-9]|3[01])[/-](0[1-9]|1[012])[/-](19|20)[0-9][0-9]/
+        if(reg.test(split[i]))  //if regular expression is true, it prints that array element
+        document.write("<br>"+split[i]); //display array element
+        }
+
+    </script>
+    
+</body>
+</html>

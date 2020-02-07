@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Prototype_chaining</title>
+        </head>
+        <body>
+            <script>
+                //function definition
+                function doctor(){
+                this.docname=prompt("enter doc name:");//user input for doctor function
+                this.docexp=prompt("enter doc exp:");
+                }
+        
+                function nurse(){
+                this.Nname=prompt("enter nurse name:");//user input for nurse function
+                this.Nexp=prompt("enter nurse exp:");
+                }
+
+                //function call
+                var doc= new doctor();
+                var nurse= new nurse();
+
+                //prototype chain using inheritance
+                doctor.prototype.patientname=prompt("enter patient name:");
+                nurse.prototype=doctor.prototype;//prototype chain
+                
+                //displaying result
+                document.write("<br> doctor name: "+doc.docname);
+                document.write("<br> doctor exp: "+doc.docexp);
+                document.write("<br> Nurse name: "+nurse.Nname);
+                document.write("<br> Nurse exp: "+nurse.Nexp);
+                document.write("<br>Patient name: "+doc.patientname);
+                
+                
+                console.log(doc);
+        
+        
+            </script>
+        
+            
+        </body>
+        </html>
+</body>
+</html>

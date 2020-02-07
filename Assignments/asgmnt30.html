@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>regex_without_trim_function</title>
+</head>
+<body>
+    <script>
+        var split1 = [];
+        var str = prompt("enter a sentence:");//input string from user
+        //debugger;
+        var ch = prompt("enter characer to be removed: ");//special character to be removed
+        document.write("Input : " + str); //displat input string
+        document.write("<br>Trim: " + ch); 
+        document.write("<br> Output: ");
+        //function call
+        func(str, ch)
+        //function definition
+        function func(str, ch) {
+            split1 = str.split(""); //string to array to check each character
+            var s = "\\";   //using \\ to add to special character to be removed
+            ch = s + ch;    //concatinating
+            for (var i = 0; i < split1.length; i++) { //loop till array length
+                var reg = new RegExp(ch)   //new regular expression
+                if (reg.test(split1[i]))  //check if regex is present in array
+                    delete (split1[i]);   //if true , delete
+
+            }
+        }
+        var res = split1.join(""); //join , array to string
+        document.write(res);       // display output
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>alpha_num_dash</title>
+</head>
+<body>
+    <script>
+        var str=prompt("Enter any string");//input from the user
+        var reg1=/-/g,reg2=/[0-9]/g, reg3=/_/g; //regular expression
+        if(reg1.test(str) && reg2.test(str) && reg3.test(str)){              //check if regex returns true
+            //if true
+            document.write("Output:  string contains alpha ,dash, numeric");
+        }
+        else{
+            //if false
+            document.write("Output:   String doesn’t contain alpha, numeric or dash");
+        }
+    </script>
+</body>
+</html>

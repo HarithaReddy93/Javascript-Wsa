@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object_prototype</title>
+</head>
+<body>
+    <script>
+        //function 
+        //input from user
+        function person(){ 
+            this.firstName=prompt("Enter your name:");
+            this.age=+prompt("Enter your age:");
+            this.phnum=+prompt("Enter phone number: ");
+        }
+        //function call
+        var Person = new person();
+
+        //prototype chain
+        person.prototype.lastname =prompt("Enter your mother father name:");
+        console.log(person)
+
+        //display output
+        document.write("First name: "+ Person.firstName);
+        document.write("<br>Last name "+ Person.lastname);
+        document.write("<br>Age: "+ Person.age);
+        document.write("<br>Ph num:  "+ Person.phnum);
+        
+    </script>
+    
+</body>
+</html>

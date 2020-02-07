@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>three_button_paragraph</title>
+</head>
+<body>
+    <!-- paragraph tag to change font , color , size -->
+    <p id="change"> 
+        Infuse your life with action.Dont wait for it to happen.
+        Make your own life. Make your own hope.
+    </p>
+    <!-- button tag -->
+    <button onclick="changeFont()">changeFont</button>
+    <button onclick="changeColor()">changeColor</button>
+    <button onclick="changeSize()">changeFontSize</button>
+
+    <script>
+        //function definition
+        //funtion to change color
+        function changeColor(){
+            document.getElementById("change").style.color = "blue";
+        }
+        //function to chnage font style
+        function changeFont(){
+            document.getElementById("change").style.fontFamily = "Helvetica";
+        }
+        //function to change font size
+        function changeSize(){
+            document.getElementById("change").style.fontSize= "larger";
+        }
+    </script>
+    
+</body>
+</html>
